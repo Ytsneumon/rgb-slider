@@ -28,7 +28,7 @@ class ColorSelector extends Component {
 			<div className={"ColorSelector"}>
 				<div>{this.props.colorChannel.substring(0, 1).toUpperCase()}</div>
 				<Slider style={style} max={255} min={0} onChange={this.handleChange} value={this.props.colorValue}/>
-				<input type={"text"} value={this.props.colorValue} readOnly={true}></input>
+				<input id={this.props.colorChannel + 'Value'} type={"text"} value={this.props.colorValue} readOnly={true}></input>
 			</div>
 		);
 	}
